@@ -1,0 +1,70 @@
+body,
+.ajax-loader {
+	&:before,
+	&:after {
+		-webkit-transition: all 300ms ease-out;
+		-o-transition: all 300ms ease-out;
+		transition: all 300ms ease-out;
+		content: "";
+		position: fixed
+	}
+
+	// &:before {
+	// 	background-color: rgba(255,255,255,0.5);
+	// 	top: 0;
+	// 	left: 0;
+	// 	width: 100%;
+	// 	height: 100%;
+	// 	z-index: 100
+	// }
+
+	&:after {
+		width: 50px;
+		height: 50px;
+		background-image: url("../img/ajax-loader.svg");
+		-webkit-background-size: cover;
+		background-size: cover;
+		background-repeat: no-repeat;
+		top: 50%;
+		left: 50%;
+		margin: -25px 0 0 -25px;
+		-webkit-animation: spin 2s linear infinite;
+		-o-animation: spin 2s linear infinite;
+		animation: spin 2s linear infinite;
+		z-index: 105
+	}
+}
+
+body {
+	&:before,
+	&:after {
+		opacity: 0;
+		visibility: hidden
+	}
+
+	&.ajax-loading {
+		&:before,
+		&:after {
+			opacity: 1;
+			visibility: visible
+		}
+	}
+}
+
+.ajax-loader {
+    -webkit-transition: all 300ms ease-out;
+    -o-transition: all 300ms ease-out;
+    transition: all 300ms ease-out;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+    background-image: none !important;
+    opacity: 0;
+	z-index: 100;
+	
+	&.is-active {
+		opacity: 1
+	}
+}

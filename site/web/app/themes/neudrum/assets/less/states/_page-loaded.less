@@ -1,0 +1,14 @@
+.masthead,
+.page-container {
+	transition: all @speed-s @effect-n 100ms;
+	opacity: 0;
+	visibility: hidden;
+}
+
+.page-loaded {
+	.masthead,
+	.page-container {
+		opacity: 1;
+		visibility: visible; 
+	}
+}

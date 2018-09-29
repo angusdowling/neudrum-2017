@@ -1,0 +1,51 @@
+html {
+  height: 100%;
+}
+
+body {
+  overflow-x: hidden;
+  position: relative;
+  background-color: @color-shade-white; 
+  font-family: @type-font-primary;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+iframe {
+  max-width: 100%;
+}
+
+
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+[tabindex]{
+  outline: 0;
+}
+
+a {
+  &,
+  &:link,
+  &:visited {
+    color: @color-shade-black;
+    outline: 0;
+  }
+}
+
+.content {
+  .clearfix;
+}
+
+.ui-widget {
+  font-family: @type-font-primary !important;
+
+  input {
+    font-size: 1rem;
+    font-family: @type-font-primary !important;
+  }
+}

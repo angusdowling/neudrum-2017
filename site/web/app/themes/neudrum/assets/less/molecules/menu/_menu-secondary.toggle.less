@@ -1,0 +1,41 @@
+.menu-secondary-toggle {
+	width: 50px;
+	height: 50px;
+	background-color: @color-shade-white;
+	border-radius: 50%;
+	border: 0;
+	position: absolute;
+	left: 0;
+	top: 15px;
+	text-align: center;
+	outline: 0;
+
+	.icon-bar {
+		position: relative;
+		
+		&,
+		&:before,
+		&:after {
+			height: 2px;
+			width: 21px;
+			background-color: @color-shade-black;
+			display: inline-block;
+			vertical-align: middle;
+			content: "";
+		}
+
+		&:before,
+		&:after {
+			position: absolute;
+			left: 0;
+		}
+
+		&:before {
+			top: -8px;
+		}
+
+		&:after {
+			bottom: -8px;
+		}
+	}
+} 

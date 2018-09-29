@@ -1,0 +1,176 @@
+// Brand colors
+// -------------------------
+@color-brand-1     : #efece7;
+@color-brand-2     : #e4dad0;
+@color-brand-3     : #525659;
+@color-brand-4     : #B4AFA9;
+ 
+@color-shade-black : #000;
+@color-shade-white : #fff;
+
+@color-shade-1     : #979797;
+@color-shade-2     : #fff;
+ 
+@brand-primary     : @color-brand-1;
+@brand-success     : #5cb85c;
+@brand-info        : #5bc0de; 
+@brand-warning     : #f0ad4e;
+@brand-danger      : #d9534f;
+
+
+// Glyphicons path
+// -------------------------
+@icon-font-path     : "../vendor/bootstrap/fonts/";
+@main-sm-columns    : @grid-columns;
+@sidebar-sm-columns : 4;
+
+
+// Type
+// -------------------------
+@type-font-primary   : "nudista-web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+@type-font-secondary : "termina", "Helvetica Neue", Helvetica, Arial, sans-serif; 
+@type-font-tertiary  : "letter-gothic-std", "Helvetica Neue", Helvetica, Arial, sans-serif; 
+
+
+// Font weights
+// -------------------------
+@type-weight-thin      : 100;
+@type-weight-light     : 200;
+@type-weight-book      : 300;
+@type-weight-regular   : 400;
+@type-weight-medium    : 500;
+@type-weight-demibold  : 600;
+@type-weight-bold      : 700;
+@type-weight-ultrabold : 800;
+@type-weight-black     : 900;
+
+
+// Breakpoints
+// -------------------------
+@screen-mb     : 480px;
+@screen-pb     : 640px;
+@screen-sm     : 768px;
+@screen-md     : 992px;
+@screen-lg     : 1310px; 
+ 
+@screen-mb-min : @screen-mb;
+@screen-pb-min : @screen-pb;
+@screen-sm-min : @screen-sm;
+@screen-md-min : @screen-md;
+@screen-lg-min : @screen-lg;
+ 
+@screen-xs-max : (@screen-mb-min - 1);
+@screen-mb-max : (@screen-pb-min - 1);
+@screen-pb-max : (@screen-sm-min - 1);
+@screen-sm-max : (@screen-md-min - 1);
+@screen-md-max : (@screen-lg-min - 1);
+
+@mobile-max:  ~"(max-width: @{screen-mb-max})";
+@tablet-min:  ~"(min-width: @{screen-pb-min})";
+@tablet-max:  ~"(max-width: @{screen-sm-max})";
+@laptop-min:  ~"(min-width: @{screen-md-min})";
+@laptop-max:  ~"(max-width: @{screen-md-max})";
+@desktop-min: ~"(min-width: @{screen-lg-min})";
+
+
+
+// Grid
+// -------------------------
+@grid-columns             : 12;
+@grid-gutter-width        : 25px;
+@grid-gutter-width-mobile : 50px;
+@grid-gutter-breakpoint   : @screen-md;
+
+
+// Container Sizes
+// -------------------------
+@ng-container-mobile              : @screen-mb - @grid-gutter-width-mobile;
+@container-mobile                 : ((@ng-container-mobile + @grid-gutter-width-mobile));
+@container-mb                     : @container-mobile;
+ 
+@ng-container-phablet             : @screen-pb - @grid-gutter-width-mobile;
+@container-phablet                : ((@ng-container-phablet + @grid-gutter-width-mobile));
+@container-pb                     : @container-phablet;
+
+@ng-container-tablet              : @screen-sm - @grid-gutter-width-mobile; 
+@container-tablet                 : ((@ng-container-tablet + @grid-gutter-width-mobile));
+@container-sm                     : @container-tablet;
+
+@ng-container-desktop             : @screen-md - @grid-gutter-width;
+@container-desktop                : ((@ng-container-desktop + @grid-gutter-width));
+@container-md                     : @container-desktop;
+
+@ng-container-large-desktop       : @screen-lg - @grid-gutter-width;
+@container-large-desktop          : ((@ng-container-large-desktop + @grid-gutter-width));
+@container-lg                     : @container-large-desktop;
+
+
+// Scaffolding
+// -------------------------
+//** Background color for `<body>`.
+@f                     : #fff;
+@k                     : #000;
+@body-bg               : @f;
+
+//** Global text color on `<body>`.
+@text-color            : @k;
+@text-color-light      : @gray-light;
+
+//** Global textual link color. 
+@link-color            : @gray-dark;
+
+//** Link hover color set via `darken()` function.
+@link-hover-color      : @gray-darker;
+
+//** Link hover decoration. 
+@link-hover-decoration : underline;
+
+
+// Transitions
+// -------------------------
+// f: fast, n: normal, s: slow, x: extra
+@speed-xxf   : 100ms;
+@speed-xf    : 200ms;
+@speed-f     : 300ms;
+@speed-n     : 400ms;
+@speed-s     : 500ms;
+@speed-xs    : 600ms;
+@speed-xxs   : 700ms;
+
+@effect-n    : ease-out;
+@effect-menu : ease-in-out;
+
+
+// Margins
+// -------------------------
+@spacing-xxs : 10px;
+@spacing-xs  : 20px;
+@spacing-s   : 30px;
+@spacing-m   : 40px;
+@spacing-l   : 60px;
+@spacing-xl  : 80px;
+@spacing-xxl : 100px;
+
+
+// Layers
+// -------------------------
+@layer-1  : 10;
+@layer-2  : 20;
+@layer-3  : 30;
+@layer-4  : 40;
+@layer-5  : 50;
+@layer-6  : 60;
+@layer-7  : 70;
+@layer-8  : 80;
+@layer-9  : 90;
+@layer-10 : 100;
+
+
+// Icons
+// -------------------------
+@icomoon-var-arrow-left    : "\e900";
+@icomoon-var-arrow-right   : "\e901";
+@icomoon-var-pin-grey      : "\e902";
+@icomoon-var-search        : "\e903";
+@icomoon-var-text-decrease : "\e904";
+@icomoon-var-text-increase : "\e905";

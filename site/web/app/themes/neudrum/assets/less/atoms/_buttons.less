@@ -1,0 +1,25 @@
+.button {
+	&,
+	&:link,
+	&:visited {
+		border-radius: 30px;
+		background-color: @color-shade-black;
+		color: @color-shade-white;
+		padding: 10px 40px;
+		font-size: 1rem;
+		font-family: @type-font-secondary;
+		text-transform: uppercase;
+		letter-spacing: 0.3em;
+		transition: background @speed-xxf @effect-n;
+		display: inline-block;
+	}
+
+	&:hover,
+	&:focus {
+		text-decoration: none;
+	}
+
+	&:hover {
+		background-color: @color-brand-3;
+	}
+}

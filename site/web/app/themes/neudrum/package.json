@@ -1,0 +1,40 @@
+{
+    "name": "roots",
+    "version": "7.0.1",
+    "author": "Ben Word <ben@benword.com>",
+    "homepage": "http://roots.io",
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/roots/roots.git"
+    },
+    "bugs": {
+        "url": "https://github.com/roots/roots/issues"
+    },
+    "licenses": [
+        {
+            "type": "MIT",
+            "url": "http://opensource.org/licenses/MIT"
+        }
+    ],
+    "scripts": {
+        "postinstall": "node node_modules/bower/bin/bower install"
+    },
+    "engines": {
+        "node": ">= 0.10.0"
+    },
+    "devDependencies": {
+        "bower": ">=1.7.10",
+        "grunt": "^1.0.1",
+        "grunt-autoprefixer": "^3.0.4",
+        "grunt-contrib-concat": "~1.0.1",
+        "grunt-contrib-jshint": "~1.1.0",
+        "grunt-contrib-less": "~1.4.1",
+        "grunt-contrib-uglify": "~3.1.0",
+        "grunt-contrib-watch": "~1.0.0",
+        "grunt-modernizr": "~1.0.2",
+        "grunt-wp-assets": "~0.2.6",
+        "less-plugin-glob": "^2.0.1",
+        "load-grunt-tasks": "~3.5.2",
+        "time-grunt": "~1.4.0"
+    }
+}

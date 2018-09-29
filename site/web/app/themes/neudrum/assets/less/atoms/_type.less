@@ -1,0 +1,105 @@
+@type-base-size-lg          : 16;
+@type-base-size-md          : 16;
+@type-base-size-sm          : 16;
+
+@type-base-leading          : 30;
+
+@type-body-size-lg          : 16;
+@type-body-size-md          : 16;
+@type-body-size-sm          : 16;
+
+@type-h1-size-lg            : 60;
+@type-h1-size-md            : 36;
+@type-h1-size-sm            : 36;
+
+@type-h2-size-lg            : 40;
+@type-h2-size-md            : 30;
+@type-h2-size-sm            : 30;
+
+@type-h3-size-lg            : 30;
+@type-h3-size-md            : 24;
+@type-h3-size-sm            : 24;
+
+@type-h4-size-lg            : 20;
+@type-h4-size-md            : 20;
+@type-h4-size-sm            : 20;
+
+@type-h5-size-lg            : 16;
+@type-h5-size-md            : 16;
+@type-h5-size-sm            : 16;
+
+.typeset(@size) {
+	@size-lg:       "type-@{size}-size-lg";
+	@size-md:       "type-@{size}-size-md";
+	@size-sm:       "type-@{size}-size-sm";
+
+	font-size: @@size-sm / @type-base-size-sm * 1rem;
+	
+	@media(min-width: @screen-sm-min){
+		font-size: @@size-md / @type-base-size-md * 1rem;
+	}
+
+	@media(min-width: @screen-md-min){
+		font-size: @@size-lg / @type-base-size-lg * 1rem;
+	}
+}
+ 
+body,
+html {
+	font-size: @type-base-size-sm * 1px;
+	font-weight: @type-weight-regular;
+	font-family: @type-font-primary;
+	color: @color-shade-black;
+	line-height: @type-base-leading / @type-base-size-lg;
+
+	@media(min-width: @screen-sm-min){
+		font-size: @type-base-size-lg * 1px;
+	}
+}
+
+.type-body {
+	font-size: 1rem;
+	font-weight: @type-weight-regular;
+	color: @color-shade-black;
+	line-height: @type-base-leading / @type-base-size-lg;
+}
+
+.type-h1,
+.type-h2,
+.type-h3,
+.type-h4,
+.type-h5 {
+	font-weight: @type-weight-bold;
+}
+
+.type-largesubtitle,
+.type-quote {
+	font-weight: @type-weight-light;
+}
+
+.type-smallsubtitle,
+.type-small,
+.type-nav,
+.type-footer {
+	font-weight: @type-weight-regular;
+}
+
+.type-h1 {
+	.typeset("h1");
+}
+
+.type-h2 {
+	.typeset("h2");
+}
+
+.type-h3 {
+	.typeset("h3");
+}
+
+.type-h4 {
+	.typeset("h4");
+}
+
+.type-h5 {
+	.typeset("h5");
+}

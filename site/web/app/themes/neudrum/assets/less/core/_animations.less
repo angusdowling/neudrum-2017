@@ -1,0 +1,86 @@
+@keyframes kaleido {
+	0%, 100% {
+		fill: @color-brand-2;
+	}
+
+	50% {
+		fill: @color-brand-3;
+	}
+}
+
+@keyframes test {
+	0% {
+		transform: rotate(90deg);
+	}
+	
+	33% {
+		transform: rotate(145deg);
+	}
+	
+	66% {
+		transform: rotate(270deg);
+	}
+}
+
+@keyframes spin {
+	0% {
+		-webkit-transform: rotate(0deg);
+		-o-transform: rotate(0deg);
+		transform: rotate(0deg)
+	}
+
+	100% {
+		-webkit-transform: rotate(359deg);
+		-o-transform: rotate(359deg);
+		transform: rotate(359deg)
+	}
+}
+
+@ease_out: cubic-bezier(0.165, 0.84, 0.44, 1);
+
+.icomoon-icon(@icon) {
+	font-family: 'icomoon' !important;
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	content:(@icon);
+	font: normal normal normal 1em/1 icomoon; 
+}
+
+.transition() {
+	transition: 700ms @ease_out;
+	
+	&:hover{
+		transition: 400ms @ease_out;
+	}
+}
+
+.arrow-transition {
+	.transition;
+	position: relative;
+	display: inline-block;
+	height: 1em;
+	width: 1em;
+	
+	&:before,
+	&:after {
+		.icomoon-icon(@icomoon-var-arrow-left);
+		position: absolute;
+		right: 0;
+		top: -25%;
+	}
+	
+	&:before {
+		transform: translateX(-15px);
+		opacity: 0;
+	}
+
+	&:after {
+		transform: none;
+	}
+}

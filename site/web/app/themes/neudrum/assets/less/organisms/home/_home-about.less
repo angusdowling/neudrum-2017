@@ -1,0 +1,208 @@
+.home-about {
+	@media @tablet-max {
+		height: auto !important;
+	}
+	
+	.container-fluid {
+		.row {
+			& > [class*="col-"]{
+				@media @tablet-max {
+					// height: ~"calc(100vh - 55px)";
+				}
+
+				@media @laptop-min {
+					height: ~"calc(100vh - 160px)";
+				}
+			} 
+		}
+	}
+
+	&__image,
+	&__content {
+		height: 100%;
+	}
+
+	&__image {
+		background-size: cover;
+		background-position: center center;
+		background-repeat: no-repeat;
+
+		@media @tablet-max {
+			display: none;
+		}
+	}
+
+	&__content {
+		background-color: @color-brand-1;
+
+		@media @tablet-max {
+			padding: 25px 30px;
+		}
+
+		@media @laptop-min {
+			padding: 55px 50px;
+		}
+
+		@media @desktop-min {
+			padding: 75px 100px;
+		}
+
+		.tab-panel {
+			display: none;
+
+			&.active {
+				display: block;
+			}
+		}
+	}
+
+	&__header,
+	&__tabs {
+		text-align: left;
+	}
+
+	&__header {
+		margin-bottom: 30px;
+
+		h2 {
+			font-size: 36px;
+			font-weight: 300;
+			color: @color-brand-3;
+			line-height: 1;
+			margin: 0;
+		}
+	}
+
+	&__tabs {
+		// Tabs
+		.nav-tabs {
+			border-bottom: 0; 
+			a {
+				&,
+				&:link,
+				&:visited {
+					border: 0 !important;
+					background-color: transparent !important;
+					display: inline-block;
+					color: @color-brand-3 !important;
+					font-family: @type-font-secondary;
+					text-transform: uppercase;
+					padding: 0 0 10px;
+					border-radius: 0;
+					font-size: 12px;
+					letter-spacing: 0.2em;
+					line-height: 1;
+				}
+			}
+
+			li {
+				@media @tablet-max {
+					float: none;
+				}
+
+				&:not(:last-child){
+					@media @laptop-min {
+						margin-right: 35px;
+					}
+				}
+
+				&.active {
+					a {
+						&,
+						&:link,
+						&:visited {
+							border-bottom: 1px solid @color-brand-3 !important;
+						}
+					}
+				}
+			}
+		}
+
+		.tab-content {
+			color: @color-brand-3;
+
+			@media @tablet-max {
+				margin-top: 20px;
+			}
+			
+			@media @laptop-min {
+				margin-top: 40px;
+			}
+
+			p {
+				&:first-child {
+					margin-top: 0;
+				}
+
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+		}
+
+		// Accordion
+		.panel {
+			border: 0 !important;
+			background-color: transparent;
+			box-shadow: none !important;
+
+			.panel-heading {
+				background-color: transparent;
+				border-radius: 0;
+				border: none !important;
+				padding: 0;
+
+				.panel-title {
+					a {
+						&,
+						&:link,
+						&:visited {
+							background: @color-shade-white;
+							display: block;
+							padding: 13px 15px;
+							text-decoration: none;
+							position: relative;
+							font-weight: 100;
+							text-transform: uppercase;
+							font-size: 13px;
+							font-family: @type-font-secondary;
+						}
+
+						&:after {
+							content: "\e615";
+							font-family: 'simple-line-icons';
+							speak: none;
+							font-style: normal;
+							font-weight: normal;
+							font-variant: normal;
+							position: absolute;
+							right: 15px;
+							top: 10px;
+							font-size: 16px;
+						}
+
+						&.collapsed {
+							&:after {
+								content: "\e095";
+							}
+						}
+					}
+				}
+			}
+
+			.panel-body {
+				border: 0 !important;
+
+				p {
+					&:first-child {
+						margin-top: 0;
+					}
+
+					&:last-child {
+						margin-bottom: 0;
+					}
+				}
+			}
+		}
+	}
+}
