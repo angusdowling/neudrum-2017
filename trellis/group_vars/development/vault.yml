@@ -7,4 +7,5 @@ vault_wordpress_sites:
   neudrum.com.au:
     admin_password: admin
     env:
+      acf_pro_key: b3JkZXJfaWQ9NjQ2MjR8dHlwZT1kZXZlbG9wZXJ8ZGF0ZT0yMDE1LTA5LTIxIDAwOjE4OjQ3
       db_password: example_dbpassword

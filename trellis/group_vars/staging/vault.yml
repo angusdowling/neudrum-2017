@@ -22,3 +22,4 @@ vault_wordpress_sites:
       secure_auth_salt: "QdC$z{@+EE@hV2k!A@xvce.@;%hrT+`zEGvDzX68zggNjgJ^oGbobuia>moB{1Bt"
       logged_in_salt: "mGP?/vi61([:L6!S.I`VPQ:OR-EylgOrtHHUk.x(r4K%?AYR^D-.Ss71J8ZgFE^s"
       nonce_salt: "xYz;YT]Vd0A6agIiv_C4-FrUv1VH(.QF]J|BBA$a^SR9Ad6wNE(9uC7!w[1AxqPR"
+      acf_pro_key: b3JkZXJfaWQ9NjQ2MjR8dHlwZT1kZXZlbG9wZXJ8ZGF0ZT0yMDE1LTA5LTIxIDAwOjE4OjQ3
