@@ -9,13 +9,12 @@ users:
       - sudo
     keys:
       - "{{ lookup('file', '~/.ssh/id_rsa.pub') }}"
-      # - https://github.com/username.keys
+      
   - name: "{{ admin_user }}"
     groups:
       - sudo
     keys:
-      - "{{ lookup('file', '~/.ssh/neudrum.pem') }}"
-      # - https://github.com/username.keys
+      - "{{ lookup('file', '~/.ssh/neudrum.pub') }}"
 
 web_user: web
 web_group: www-data
